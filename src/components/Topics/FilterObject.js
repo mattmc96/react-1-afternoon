@@ -29,7 +29,18 @@ export default class FilterObject extends Component {
   handleChange(val) {
     this.setState({ userInput: val });
   }
-  filterEmployees(prop) {}
+  // Toy Problem
+  filterEmployees(prop) {
+    let employees = this.state.employees;
+    let filteredEmployees = [];
+
+    for (let i = 0; i < employees.length; i++) {
+      if (employees[i].hasOwnProperty(prop)) {
+        filteredEmployees.push(employees[i]);
+      }
+    }
+    this.setState({ filteredEmployees: filteredEmployees });
+  }
   render() {
     return (
       <div className="puzzleBox filterObjectPB">

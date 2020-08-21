@@ -14,7 +14,7 @@ export default class EvenAndOdd extends Component {
   handleChange(val) {
     this.setState({ userInput: val });
   }
-
+  //Toy Problem
   assignEvenAndOdds(userInput) {
     const arr = userInput.split(",");
     const evens = [];
